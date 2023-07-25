@@ -40,9 +40,7 @@ struct ButtonView: View {
     var body: some View {
         Button(action: timer.startTimer) {
             Text(timer.buttonTitle)
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
+                .formatAndMakeBold(.title, .white)
         }
         .frame(width: 200, height: 60)
         .background(.red)
@@ -51,5 +49,25 @@ struct ButtonView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(.black, lineWidth: 4)
         )
+        
+        Button(action: {}) {
+            Text("LogOut")
+                .font(.title)
+                .bold()
+                .foregroundColor(.white)
+                .frame(width: 200, height: 60)
+                .background(.red)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black, lineWidth: 4)
+                )
+        }
+    }
+}
+
+extension View {
+    func formatAndMakeBold(_ font: Font,_ color: Color) -> some View {
+        modifier(TextFormat(font: .title, color: .white))
     }
 }

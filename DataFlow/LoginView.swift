@@ -13,8 +13,15 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-           TextField("Enter your name...", text: $name)
-                .multilineTextAlignment(.center)
+            HStack {
+                TextField("Enter your name...", text: $name)
+                    .frame(width: 200)
+                
+                Text("\(name.count)")
+                    .foregroundColor(name.count > 2 ? .green : .red)
+            }
+            .multilineTextAlignment(.center)
+            
             Button(action: registerUser) {
                 Label("OK", systemImage: "checkmark.circle")
             }
@@ -22,9 +29,11 @@ struct LoginView: View {
     }
     
     private func registerUser() {
-        if !name.isEmpty {
+        if !name.isEmpty && name.count > 2 {
             userSettings.name = name
             userSettings.isRegistered.toggle()
+            
+            
         }
     }
 }

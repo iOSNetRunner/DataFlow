@@ -15,6 +15,7 @@
 		518DC8612A6EFC7500449B1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DC8602A6EFC7500449B1A /* LoginView.swift */; };
 		518DC8632A6EFD3500449B1A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DC8622A6EFD3500449B1A /* UserSettings.swift */; };
 		518DC8652A6EFE1A00449B1A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DC8642A6EFE1A00449B1A /* RootView.swift */; };
+		609C7CBB2A70564200C5C45D /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C7CBA2A70564200C5C45D /* TextFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		518DC8602A6EFC7500449B1A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		518DC8622A6EFD3500449B1A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		518DC8642A6EFE1A00449B1A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		609C7CBA2A70564200C5C45D /* TextFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		5136AAA12A6EE65E0027569F /* DataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				609C7CBA2A70564200C5C45D /* TextFormat.swift */,
 				5136AAA22A6EE65E0027569F /* DataFlowApp.swift */,
 				5136AAA42A6EE65E0027569F /* ContentView.swift */,
 				518DC8602A6EFC7500449B1A /* LoginView.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609C7CBB2A70564200C5C45D /* TextFormat.swift in Sources */,
 				518DC8632A6EFD3500449B1A /* UserSettings.swift in Sources */,
 				518DC85F2A6EF7A900449B1A /* TimeCounter.swift in Sources */,
 				518DC8652A6EFE1A00449B1A /* RootView.swift in Sources */,

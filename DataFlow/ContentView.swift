@@ -22,6 +22,12 @@ struct ContentView: View {
             Spacer()
             ButtonView(timer: timer)
             Spacer()
+            Button(action: {}) {
+                Text("LogOut")
+                    .formatAndMakeBoldText()
+            }
+            .formatButton(color: .blue)
+            
         }
         .padding()
     }
@@ -34,40 +40,16 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    
-    var body: some View {
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
-                .formatAndMakeBold(.title, .white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.black, lineWidth: 4)
-        )
-        
-        Button(action: {}) {
-            Text("LogOut")
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
-                .frame(width: 200, height: 60)
-                .background(.red)
-                .cornerRadius(20)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(.black, lineWidth: 4)
-                )
-        }
-    }
-}
 
 extension View {
-    func formatAndMakeBold(_ font: Font,_ color: Color) -> some View {
+    func formatAndMakeBoldText() -> some View {
         modifier(TextFormat(font: .title, color: .white))
+    }
+    
+    func formatButton(color: Color) -> some View {
+        modifier(ButtonFormat(frame: CGSize(width: 200, height: 60),
+                              color: color,
+                              radius: 20,
+                              strokeLineWidth: 4))
     }
 }

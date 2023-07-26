@@ -5,9 +5,10 @@
 //  Created by Vasichko Anna on 24.07.2023.
 //
 
-import Foundation
+
+import SwiftUI
 
 final class UserSettings: ObservableObject {
-    @Published var isRegistered = false
-    var name = StorageManager.shared.fetchName()
+    @AppStorage("isRegistered") var isRegistered = false
+    @AppStorage("name") var name = ""
 }

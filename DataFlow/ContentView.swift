@@ -11,11 +11,13 @@ struct ContentView: View {
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var userSettings: UserSettings
     
+    
     var body: some View {
         VStack {
             Text("Hi, \(userSettings.name)!")
                 .font(.largeTitle)
                 .padding(.top, 50)
+            
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
@@ -33,9 +35,11 @@ struct ContentView: View {
     }
     
     private func logout() {
-        userSettings.isRegistered = false
+        userSettings.isRegistered.toggle()
         userSettings.name = ""
-        StorageManager.shared.deleteName()
+        if let bundleID = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundleID)
+        }
     }
 }
 
@@ -53,9 +57,11 @@ extension View {
     }
     
     func formatButton(color: Color) -> some View {
-        modifier(ButtonFormat(frame: CGSize(width: 200, height: 60),
-                              color: color,
-                              radius: 20,
-                              strokeLineWidth: 4))
+        modifier(ButtonFormat(
+            frame: CGSize(width: 200, height: 60),
+            color: color,
+            radius: 20,
+            strokeLineWidth: 4)
+        )
     }
 }

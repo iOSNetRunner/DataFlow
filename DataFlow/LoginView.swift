@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @AppStorage("name") private var name = ""
+    @State private var name = ""
     @EnvironmentObject private var userSettings: UserSettings
     
     var body: some View {
@@ -32,10 +32,10 @@ struct LoginView: View {
     }
     
     private func registerUser() {
-        if !name.isEmpty && name.count > 2 {
+        if name.count > 2 {
             userSettings.name = name
             userSettings.isRegistered.toggle()
-            StorageManager.shared.save(name: name)
+            
         }
     }
 }

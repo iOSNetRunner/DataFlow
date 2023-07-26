@@ -22,7 +22,7 @@ struct ContentView: View {
             Spacer()
             ButtonView(timer: timer)
             Spacer()
-            Button(action: {}) {
+            Button(action: logout) {
                 Text("LogOut")
                     .formatAndMakeBoldText()
             }
@@ -30,6 +30,12 @@ struct ContentView: View {
             
         }
         .padding()
+    }
+    
+    private func logout() {
+        userSettings.isRegistered = false
+        userSettings.name = ""
+        StorageManager.shared.deleteName()
     }
 }
 

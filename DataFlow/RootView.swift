@@ -12,7 +12,7 @@ struct RootView: View {
     
     var body: some View {
         Group {
-            if userSettings.isRegistered {
+            if userSettings.isRegistered || !userSettings.name.isEmpty {
                 ContentView()
             } else {
                 LoginView()

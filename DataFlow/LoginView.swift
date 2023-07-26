@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var name = ""
+    @AppStorage("name") private var name = ""
     @EnvironmentObject private var userSettings: UserSettings
     
     var body: some View {
@@ -16,6 +16,7 @@ struct LoginView: View {
             HStack {
                 TextField("Enter your name...", text: $name)
                     .frame(width: 200)
+                    .autocorrectionDisabled(true)
                 
                 Text("\(name.count)")
                     .foregroundColor(name.count > 2 ? .green : .red)
@@ -24,16 +25,17 @@ struct LoginView: View {
             
             Button(action: registerUser) {
                 Label("OK", systemImage: "checkmark.circle")
+                    .disabled(name.count < 3)
             }
         }
+        
     }
     
     private func registerUser() {
         if !name.isEmpty && name.count > 2 {
             userSettings.name = name
             userSettings.isRegistered.toggle()
-            
-            
+            StorageManager.shared.save(name: name)
         }
     }
 }

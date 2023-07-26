@@ -9,5 +9,5 @@ import Foundation
 
 final class UserSettings: ObservableObject {
     @Published var isRegistered = false
-    var name = ""
+    var name = StorageManager.shared.fetchName()
 }

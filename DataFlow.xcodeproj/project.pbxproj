@@ -18,6 +18,7 @@
 		609C7CBB2A70564200C5C45D /* TextFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C7CBA2A70564200C5C45D /* TextFormat.swift */; };
 		609C7CBD2A705E2600C5C45D /* ButtonFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C7CBC2A705E2600C5C45D /* ButtonFormat.swift */; };
 		609C7CBF2A70638100C5C45D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C7CBE2A70638100C5C45D /* ButtonView.swift */; };
+		609C7CC12A70688500C5C45D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C7CC02A70688500C5C45D /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		609C7CBA2A70564200C5C45D /* TextFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormat.swift; sourceTree = "<group>"; };
 		609C7CBC2A705E2600C5C45D /* ButtonFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormat.swift; sourceTree = "<group>"; };
 		609C7CBE2A70638100C5C45D /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		609C7CC02A70688500C5C45D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +67,18 @@
 		5136AAA12A6EE65E0027569F /* DataFlow */ = {
 			isa = PBXGroup;
 			children = (
-				5136AAA62A6EE6600027569F /* Assets.xcassets */,
 				609C7CBC2A705E2600C5C45D /* ButtonFormat.swift */,
 				609C7CBE2A70638100C5C45D /* ButtonView.swift */,
 				5136AAA42A6EE65E0027569F /* ContentView.swift */,
 				5136AAA22A6EE65E0027569F /* DataFlowApp.swift */,
 				518DC8602A6EFC7500449B1A /* LoginView.swift */,
-				5136AAA82A6EE6600027569F /* Preview Content */,
 				518DC8642A6EFE1A00449B1A /* RootView.swift */,
+				609C7CC02A70688500C5C45D /* StorageManager.swift */,
 				609C7CBA2A70564200C5C45D /* TextFormat.swift */,
 				518DC85E2A6EF7A900449B1A /* TimeCounter.swift */,
 				518DC8622A6EFD3500449B1A /* UserSettings.swift */,
+				5136AAA62A6EE6600027569F /* Assets.xcassets */,
+				5136AAA82A6EE6600027569F /* Preview Content */,
 			);
 			path = DataFlow;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				518DC8652A6EFE1A00449B1A /* RootView.swift in Sources */,
 				5136AAA52A6EE65E0027569F /* ContentView.swift in Sources */,
 				518DC8612A6EFC7500449B1A /* LoginView.swift in Sources */,
+				609C7CC12A70688500C5C45D /* StorageManager.swift in Sources */,
 				5136AAA32A6EE65E0027569F /* DataFlowApp.swift in Sources */,
 				609C7CBF2A70638100C5C45D /* ButtonView.swift in Sources */,
 			);
